@@ -23,8 +23,7 @@ The funding information of more than 34,000 organisations that have received fun
 <AlpahabetSoupCharity_Optimisation.ipynb> for the process described below.
 
 ## Results
-
-### Data Preprocessing
+## Data Preprocessing
 ### What variable(s) are the target(s) for your model?
  - The "IS_SUCCESSFUL" column, was the y target variable for the model. 
  - There were 18261 `1` successful labels and 16038 `0` unsuccessful labels. This indicated a fairly well-balanced column of data as the target variable.
@@ -47,20 +46,17 @@ The funding information of more than 34,000 organisations that have received fun
   - The final DataFrame had 75 columns.
   - Data was split using "train_test_split".
   - Data was then scaled as the "ASK_AMT" column was a much larger integer compared with all other columns.
-### Compiling, Training, and Evaluating the Model
-
+## Compiling, Training, and Evaluating the Model
 ### How many neurons, layers, and activation functions did you select for your neural network model, and why?
  - The features for the model were 74 in total.
  - The length of X-train, 74, was the input-dimensions for the input layer, with 74 neurons. I experimented with relu, LeakyReLu and tanh activation functions, and got best results with a tanh activation function.
  - In the 2nd hidden layer I chose to use two thirds the input layer of neurons, selecting 50. I experimented with relu, LeakyReLu and tanh activation functions, and got best results with a tanh activation function. 
  - In the output layer there was 1 neuron and a sigmoid activation function used.
+ - There were 9351 parameters in this model.
 
  - I was also able to create a callback that saved the model weights every five epochs. These were saved in a checkpoint folder in content in colab.
-
 ### Were you able to achieve the target model performance?
  - I am so EXCITED to say I achieved the target model performance of 75% accuracy.
- 
-
 ### What steps did you take in your attempts to increase model performance?
  - Experimenting with binning fewer features so as to have more columns in the Dataframe.
  - Increasing the number of neurons/nodes in each hidden layer. 
@@ -81,9 +77,8 @@ Loss: 0.5581400394439697, Accuracy: 0.7292128205299377
 Optimisation model
 Loss: 0.5132946372032166, Accuracy: 0.7500874400138855
 
-I also ran a keras tuner to find the best 3 model hyperparameters, <AlpahabetSoupCharity_Optimisation_keras_tuner.ipynb>.
+I also ran a keras tuner to find the best 3 model hyperparameters, <AlpahabetSoupCharity_Optimisation_keras_tuner.ipynb>. 
 
 I would recommend the use of a logistic regression model, a support vector machine learning model or a decision tree to improve prediction accuracy with this classification problem of what features contribute to improved success in getting funding from the Alphabet Soup organisation.
 
-### Enjoy marking!
-### Sandra
+### Enjoy marking! Sandra
